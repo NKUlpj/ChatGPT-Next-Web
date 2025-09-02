@@ -255,7 +255,7 @@ export function SideBar(props: { className?: string }) {
         logo={<ChatGptIcon />}
         shouldNarrow={shouldNarrow}
       >
-        <div style="margin-bottom:20px;margin-left:auto;margin-right:auto;">
+        <div style={{marginBottom:'20px', marginLeft: 'auto', marginRight:'auto'}}>
           <IconButton
             icon={<MaskIcon />}
             text={shouldNarrow ? undefined : Locale.Mask.Name}
