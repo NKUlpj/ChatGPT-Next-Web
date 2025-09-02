@@ -87,10 +87,28 @@
   }
 }
 
+@font-face {
+  font-family: 'FiraCode-LXK';
+  src: url('https://io.hwater.site/FiraCode-LXK.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* 优化字体加载性能 */
+}
+
+/* 排除 katex 相关的元素 */
+/* 重置 katex 的字体设置 */
+.katex,
+.katex-display,
+.katex-html,
+.katex * {
+  font-family: KaTeX_Main, 'Times New Roman', serif !important;
+}
+
+
 html {
   height: var(--full-height);
 
-  font-family: "Noto Sans", "SF Pro SC", "SF Pro Text", "SF Pro Icons",
+  font-family: "FiraCode-LXK", "Noto Sans", "SF Pro SC", "SF Pro Text", "SF Pro Icons",
     "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -398,26 +416,4 @@ pre {
 
 .copyable {
   user-select: text;
-}
-@font-face {
-  font-family: 'FiraCode-LXK';
-  src: url('https://io.hwater.site/FiraCode-LXK.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; /* 优化字体加载性能 */
-}
-
-/* 设置全局字体 */
-*, html, body {
-  font-family: 'FiraCode-LXK', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-  font-size: 16px;
-  line-height: 1.6;
-}
-/* 排除 katex 相关的元素 */
-/* 重置 katex 的字体设置 */
-.katex,
-.katex-display,
-.katex-html,
-.katex * {
-  font-family: KaTeX_Main, 'Times New Roman', serif !important;
 }
