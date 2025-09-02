@@ -255,7 +255,7 @@ export function SideBar(props: { className?: string }) {
         logo={<ChatGptIcon />}
         shouldNarrow={shouldNarrow}
       >
-        <div style={{marginBottom:'20px', marginLeft: 'auto', marginRight:'auto'}}>
+        <div className={styles["sidebar-header-bar"]}>
           <IconButton
             icon={<MaskIcon />}
             text={shouldNarrow ? undefined : Locale.Mask.Name}
@@ -272,7 +272,6 @@ export function SideBar(props: { className?: string }) {
           {mcpEnabled && (
             <IconButton
               icon={<McpIcon />}
-              style={{marginTop:'20px'}}
               text={shouldNarrow ? undefined : Locale.Mcp.Name}
               className={styles["sidebar-bar-button"]}
               onClick={() => {
@@ -283,7 +282,6 @@ export function SideBar(props: { className?: string }) {
           )}
           <IconButton
             icon={<DiscoveryIcon />}
-            style={{marginTop:'20px'}}
             text={shouldNarrow ? undefined : Locale.Discovery.Name}
             className={styles["sidebar-bar-button"]}
             onClick={() => setshowDiscoverySelector(true)}
